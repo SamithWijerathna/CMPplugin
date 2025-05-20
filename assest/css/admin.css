@@ -1,0 +1,157 @@
+/* Admin styles for AllInOne Coming Soon plugin */
+
+/* Main layout */
+.aio-cmp-admin h1 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.aio-cmp-admin h1 .dashicons {
+    margin-right: 10px;
+    font-size: 26px;
+    width: 26px;
+    height: 26px;
+}
+
+.aio-cmp-container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.aio-cmp-settings {
+    flex: 1;
+    max-width: 600px;
+}
+
+.aio-cmp-preview {
+    flex: 1;
+    min-width: 400px;
+}
+
+/* Preview iframe container */
+.aio-cmp-preview-container {
+    position: relative;
+    width: 100%;
+    padding-top: 56.25%; /* 16:9 aspect ratio */
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#aio-cmp-preview-frame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Form styling */
+.aio-cmp-admin input[type="text"],
+.aio-cmp-admin select {
+    width: 100%;
+    max-width: 400px;
+}
+
+.aio-cmp-admin .form-table th {
+    width: 200px;
+}
+
+/* Toggle switch */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 1200px) {
+    .aio-cmp-container {
+        flex-direction: column;
+    }
+    
+    .aio-cmp-settings, 
+    .aio-cmp-preview {
+        max-width: 100%;
+    }
+}
+
+/* Notification styles */
+.aio-cmp-notice {
+    background: #fff;
+    border-left: 4px solid #00a0d2;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+    margin: 10px 0;
+    padding: 10px 12px;
+}
+
+.aio-cmp-notice-success {
+    border-left-color: #46b450;
+}
+
+.aio-cmp-notice-error {
+    border-left-color: #dc3232;
+}
+
+/* Color picker */
+.aio-cmp-color-picker {
+    width: 100px !important;
+    height: 30px !important;
+}
